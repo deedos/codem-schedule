@@ -23,7 +23,8 @@ class Transcoder
         'source_file' => job.source_file,
         'destination_file' => job.destination_file,
         'encoder_options' => job.preset.parameters,
-        'thumbnail_options' => thumb_opts
+        'thumbnail_options' => thumb_opts,
+        'segment_options' => segment_opts
       }.to_json
     end
 
