@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Preset, type: :model do
   describe 'generating a preset via the API' do
     it 'should map the attributes correctly' do
-      Preset.from_api('name' => 'name', 'parameters' => 'params', 'thumbnail_options' => '{"seconds":1}')
+      Preset.from_api('name' => 'name', 'parameters' => 'params', 'thumbnail_options' => '{"seconds":1}', 'segment_options' => '{"seconds":10}')
       p = Preset.last
       expect(p.name).to eq('name')
       expect(p.parameters).to eq('params')
