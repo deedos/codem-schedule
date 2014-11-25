@@ -10,7 +10,8 @@ class Preset < ActiveRecord::Base
     attributes = attributes[:preset] if attributes[:preset]
     create(name: attributes['name'],
            parameters: attributes['parameters'],
-           thumbnail_options: attributes['thumbnail_options'])
+           thumbnail_options: attributes['thumbnail_options']
+           segment_options: attributes['segment_options'])
   end
 
   private
